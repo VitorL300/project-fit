@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso - Iniciante</title>
+    <link rel="stylesheet" href="/css/curso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="top-navbar">
+    <div class="left-section">
+        <button id="menu-toggle" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <a href="/aluno" class="logo-link">
+            <img src="/logo/logo.png" alt="Logo FitProject" class="logo-img">
+        </a>
+    </div>
+    
+    <div class="right-section">
+        <i class="far fa-bell notification-icon"></i>
+    </div>
+</header>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/aluno" class="nav-link active">
+                        <i class="fas fa-home"></i> <span>Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i> <span>Produtos à venda</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i> <span>Minhas compras</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-trophy"></i> <span>Ranking</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-btn">
+                        <div class="link-text">
+                            <i class="fas fa-play-circle"></i> <span>Canais</span>
+                        </div>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="/curso-iniciante">Iniciantes</a></li>
+                        <li><a href="/curso-queima">Queima Calórica</a></li>
+                        <li><a href="/curso-corpo">Corpo & Mente</a></li>
+                        <li><a href="/curso-forca">Força</a></li>
+                        <li><a href="/curso-express">Express 15</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-btn">
+                        <div class="link-text">
+                            <i class="fas fa-link"></i> <span>Links Úteis</span>
+                        </div>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40" alt="Foto Perfil" class="profile-img">
+                <div class="user-info">
+                    <span class="user-name">Olá, Aluno</span>
+                    <span class="user-status">Plano Premium</span>
+                </div>
+            </div>
+            
+            <a href="/login" class="logout-icon" title="Sair">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </aside>
+
+
+    <main class="main-content" id="main-content">
+        <video src="/logo/teste.mp4"
+            controls
+            width="800"
+            poster="/logo/testeimg.webp">
+        </video>
+    </main>
+
+    <aside class="sidebar-right">
+        <div class="playlist-header">
+            <h4>Próximas Aulas</h4>
+        </div>
+        
+        <ul class="video-playlist">
+            <li class="video-item active" 
+                data-video="/logo/teste.mp4" 
+                data-poster="/logo/testeimg.webp">
+                
+                <img src="/logo/testeimg.webp" class="thumb" alt="Thumbnail">
+                <div class="video-info">
+                    <h5 class="video-title">Introdução ao Curso</h5>
+                    <span class="video-duration">05:20</span>
+                </div>
+                <i class="fas fa-play-circle play-icon"></i>
+            </li>
+
+            <li class="video-item" 
+                data-video="/logo/aula2.mp4" 
+                data-poster="/logo/thumb2.webp">
+                
+                <img src="https://via.placeholder.com/150x90" class="thumb" alt="Thumbnail">
+                <div class="video-info">
+                    <h5 class="video-title">Aquecimento Global</h5>
+                    <span class="video-duration">10:15</span>
+                </div>
+            </li>
+
+            <li class="video-item" 
+                data-video="/logo/aula3.mp4" 
+                data-poster="/logo/thumb3.webp">
+                
+                <img src="https://via.placeholder.com/150x90" class="thumb" alt="Thumbnail">
+                <div class="video-info">
+                    <h5 class="video-title">Técnicas de Respiração</h5>
+                    <span class="video-duration">08:45</span>
+                </div>
+            </li>
+            
+            </ul>
+    </aside>
+
+    <script src="/js/curso.js"></script>
+</body>
+</html>

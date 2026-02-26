@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*--------------------- background e animação ----------------------------*/
+
+body{
+    background-color: #0B0B0B;
+    color: #fff;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;    
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 200;
+    overflow-x: hidden;
+}
+
+.circle{
+    position: fixed;
+    bottom: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: #0f0;
+    box-shadow: 0 0 10px #0f0,
+    0 0 20px #0f0,
+    0 0 30px #0f0,
+    0 0 50px #0f0;
+    border-radius: 50%;
+    animation: animate 5s forwards;
+    z-index: -1;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+.circle::before
+{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    width: 50%;
+    height: 100vh;
+    opacity: 0.5s;
+    background: linear-gradient(#0f0, transparent);
+}
+
+/*---------------------- MENU --------------------------------*/
+
+.logo{
+    width: 300px;
+    margin-left: 40px;
+    margin-bottom: -30px;
+    margin-top: -20px;
+}
+
+.btn{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    margin-right: 40px;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: 1px solid #bac2c2;
+    border-radius: 14px;
+    background-color: transparent;
+    color: #bac2c2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.btn:hover {
+    border-color: #fff;      /* Borda fica branca */
+    color: #fff;             /* Texto fica branco */
+    background-color: rgba(255,255,255, 0.1); /* Fundo levemente branco */
+    transform: scale(1.05);  /* Aumenta 5% de tamanho */
+}
+
+/* Estado: Clicando */
+.btn:active {
+    transform: scale(0.95);  /* Diminui levemente (efeito de apertar) */
+    background-color: #68A063;
+    color: #000;
+}
+
+.flex-box-lateral{
+    position: fixed;
+    background-color: #1E1F21;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    width: 150px;
+    height: 400px;
+    margin-left: 70px;
+    margin-top: 10px;
+    padding: 40px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    display: block; 
+      
+    
+
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.flex-box-lateral ul {
+    list-style: none; /* Remove as bolinhas */
+    padding-left: 0;   /* Remove o recuo padrão da esquerda */
+    margin: 0;
+}
+
+.flex-box-lateral ul li {
+    margin-bottom: 32px;
+    margin-left: -10px;
+    align-items: center;
+}
+
+.flex-box-lateral ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #bac2c2;          
+    display: block;        /* Faz o clique funcionar na linha toda, não só no texto */
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Mouse por cima do link */
+.flex-box-lateral ul li a:hover {
+    color: #fff;             /* Muda para branco (ou use uma cor verde neon!) */
+    padding-left: 10px;      /* Desliza 10px para a direita */
+}
+
+/* Clicando no link */
+.flex-box-lateral ul li a:active {
+    color: #666;             /* Fica mais escuro no clique */
+}
+
+/*-------------------- FLEX-BOX -----------------*/
+
+.img-circle{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    border: #68A063 solid 5px;
+}
+
+.sessao-sobre{
+    position: relative;
+    display: flex;
+    padding: 60px;
+    padding-right: 340px;
+}
+
+.flex-box{
+    background-color: #1E1F21;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 70px;
+    margin-left: 30%;
+    margin-bottom: 30px;
+    padding: 45px;
+    display: block;
+   
+}
+
+.flex-box ul li{
+    list-style: none; /* Remove as bolinhas */
+    display: flex;        /* Coloca a imagem e o texto na mesma linha */
+    align-items: center;  /* Centraliza o ícone verticalmente com o texto */
+    gap: 5px;            /* Cria um espaço entre a imagem e o texto */
+    margin-bottom: 30px;
+}
+
+.flex-box-img{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px;
+    background-color: #000;
+    width: 80px; 
+    height: 80px;
+    object-fit: contain; /* Evita que a imagem estique/distorça */
+    align-items: center;
+    margin-right: 20px;
+}
+
+.flex-box-img:hover{
+    scale: 1.05;
+    transition: 0.3s ease;
+}
+
+.title-font{
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1{
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.title-heading{
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+

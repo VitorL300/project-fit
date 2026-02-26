@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fit Project</title>
+        <link rel="stylesheet" href="/css/carrinho.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        />
+    </head>
+
+    <body>
+        <div class="barra-navegacao">
+            <a href="/page-carrinho">
+                <h2>Fit Project</h2>
+            </a>
+
+            <a href="/carrinho">
+                <div class="carrinho">
+                    <i class="bi bi-cart2"></i>
+                    <div id="quantidadeCarrinho" class="quantidadeCarrinho">
+                        0
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div id="etiqueta" class="texto-centralizado">
+            <h2>Carrinho vazio</h2>
+            <a href="/page-carrinho">
+                <button class="botao-loja">Voltar para a Loja</button>
+            </a>
+        </div>
+
+        <div id="etiqueta" class="texto-centralizado">
+            <h2>Total: $ 100</h2>
+            <button class="checkout">Finalizar Compra</button>
+            <button class="removerTudo">Limpar Carrinho</button>
+        </div>
+
+        <div class="carrinho-compras" id="carrinho-compras">
+            <div class="item-carrinho">
+                <img width="100" src="/logo/força.png">
+                <div class="detalhes">
+                    <div class="título">
+                        <div class="titulo-preco-x">
+                            <h4 class="titulo-preco">
+                                <p>Nome do produto</p>
+                                <p class="preco-item-carrinho">$100</p>
+                            </h4>
+                            <i class="bi bi-x-lg"></i>
+                            <div class="botoes-carrinho">
+                                <i class="bi bi-dash-lg"></i>
+                                <div class="quantidade">1</div>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                        </div>
+                        <h3>$100</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carrinho-compras" id="carrinho-compras">
+            <div class="item-carrinho">
+                <img width="100" src="/logo/força.png">
+                <div class="detalhes">
+                    <div class="título">
+                        <div class="titulo-preco-x">
+                            <h4 class="titulo-preco">
+                                <p>Nome do produto</p>
+                                <p class="preco-item-carrinho">$100</p>
+                            </h4>
+                            <i class="bi bi-x-lg"></i>
+                            <div class="botoes-carrinho">
+                                <i class="bi bi-dash-lg"></i>
+                                <div class="quantidade">1</div>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                        </div>
+                        <h3>$100</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="src/Dados.js"></script>
+    <script src="src/main.js"></script>
+</html>

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B0B0B; /* Fundo principal */
+    color: #fff;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 200;
+    overflow-x: hidden;
+    display: flex; /* Permite colocar Sidebar e Conteúdo lado a lado */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
+
+:root {
+    --header-height: 60px;
+    --sidebar-width: 260px;
+    --bg-dark: #0B0B0B;
+    --bg-panel: #1E1F21;
+    --green-primary: #68A063;
+    --text-grey: #bac2c2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   1. TOP NAVBAR (Cabeçalho Fixo)
+   ========================================= */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--bg-panel);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 100px; 
+    width: auto;  /* Mantém a proporção */
+    object-fit: contain;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-btn:hover { color: var(--green-primary); }
+
+.notification-icon {
+    font-size: 18px;
+    color: var(--text-grey);
+    cursor: pointer;
+}
+
+/* =========================================
+   2. SIDEBAR (Lateral Ajustada)
+   ========================================= */
+.sidebar {
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height)); /* Altura total menos o topo */
+    position: fixed;
+    top: var(--header-height); /* Começa logo abaixo do header */
+    left: 0;
+    background-color: var(--bg-panel);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    z-index: 900;
+}
+
+/* Estado Fechado (Controlado via JS) */
+.sidebar.closed {
+    left: calc(var(--sidebar-width) * -1); /* Esconde para a esquerda */
+}
+
+.sidebar-nav {
+    overflow-y: auto;
+    padding-top: 20px;
+    flex: 1;
+}
+
+/* Estilos de links (Reaproveitado do seu CSS anterior) */
+.nav-list { list-style: none; }
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    color: var(--text-grey);
+    text-decoration: none;
+    transition: 0.3s;
+    border-left: 4px solid transparent;
+}
+.link-text, .nav-link span { display: flex; align-items: center; gap: 15px; }
+.nav-link i { width: 20px; text-align: center; }
+
+.nav-link:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,0.05);
+    border-left-color: var(--green-primary);
+    padding-left: 30px;
+}
+.nav-link.active {
+    color: var(--green-primary);
+    background-color: rgba(104, 160, 99, 0.1);
+    border-left-color: var(--green-primary);
+}
+
+/* Submenus */
+.submenu { background-color: #141414; max-height: 0; overflow: hidden; transition: 0.4s; }
+.submenu-open { max-height: 500px; }
+.submenu li a { display: block; padding: 12px 25px 12px 65px; color: #888; text-decoration: none; transition: 0.3s; }
+.submenu li a:hover { color: #fff; padding-left: 70px; }
+.arrow { transition: transform 0.3s; font-size: 12px; }
+.rotate { transform: rotate(180deg); }
+
+/* =========================================
+   3. SIDEBAR FOOTER (Perfil + Ícone Sair)
+   ========================================= */
+.sidebar-footer {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa perfil do botão sair */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover;
+    border: 2px solid var(--green-primary);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name { font-size: 14px; font-weight: 600; color: #fff; }
+.user-status { font-size: 11px; color: #888; }
+
+.logout-icon {
+    color: #ff4757;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-icon:hover {
+    background-color: rgba(255, 71, 87, 0.1);
+}
+
+/* =========================================
+   4. MAIN CONTENT (Área Principal)
+   ========================================= */
+.main-content {
+    margin-top: var(--header-height); /* Mantém espaço do topo */
+    margin-left: 0; /* REMOVIDO: Agora ocupa a tela toda */
+    width: 100%;    /* Largura total */
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Quando a sidebar fecha, o conteúdo expande */
+.main-content.expanded {
+    margin-left: 0;
+}
+
+/* Estilos gerais das boxes */
+.box{
+    margin-bottom: 30px; 
+}
+.box h2 { 
+    margin-bottom: 15px; 
+    font-weight: 300; 
+    border-left: 4px solid var(--green-primary); 
+    padding-left: 10px; 
+    
+}
+
+/* Barra de progresso (do seu código anterior) */
+.progress-container { width: 100%; background-color: #333; height: 5px; border-radius: 5px; margin-top: 10px; }
+.progress-bar { height: 100%; background-color: var(--green-primary); width: 0%; border-radius: 5px; }
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    .sidebar { left: -260px; } /* Começa fechado no celular */
+    .sidebar.open { left: 0; }
+    .main-content { margin-left: 0; }
+}
+
+.box{
+    width: 80%;             /* 80% da tela conforme pedido */
+    max-width: 1200px;      /* Trava para não ficar gigante em monitores 4k */
+    background-color: #1E1F21; /* Fundo cinza do painel */
+    border-radius: 15px;    /* Bordas arredondadas */
+    padding: 30px 40px;     /* Espaçamento interno */
+    margin-bottom: 30px;    /* Espaço entre um box e outro */
+    
+    /* Garante que o conteúdo interno se organize */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-banner{
+    object-fit: cover;
+}
+
+.box.apresentacao {
+    padding: 0;          /* REMOVE o padding padrão de 30px 40px do .box */
+    overflow: hidden;    /* Essencial: Corta a imagem para respeitar o border-radius do box */
+    height: 300px;
+}
+
+.box.apresentacao .img-banner {
+    width: 100%;         /* Ocupa toda a largura */
+    height: 100%;        /* Ocupa toda a altura do box */
+    object-fit: cover;   /* MÁGICA: Preenche o espaço cortando o excesso, sem esticar */
+    display: block;      /* Remove pequenos espaços em branco abaixo de imagens inline */
+      /* Não precisa de border-radius aqui se o .box já tem e usamos overflow: hidden */
+}
+
+.box.meus-cursos {
+    display: flex;
+    flex-direction: column; /* Isso garante que o H2 fique em cima */
+    align-items: flex-start; /* Alinha tudo à esquerda */
+    gap: 20px; /* Espaço entre o título e os cards */
+}
+
+.box.meus-cursos h2 {
+    /* As propriedades que já definimos no .box h2 geral vão funcionar aqui */
+    /* Não precisa de display inline-block se o pai é flex-column */
+    width: 100%;
+}
+
+.cursos-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Se não couber na tela, quebra para linha de baixo */
+    gap: 20px;       /* Espaço entre os cards */
+    width: 100%;     /* Ocupa toda a largura do box */
+    justify-content: center; /* Alinha os cards à esquerda (ou center se preferir) */
+}
+
+.curso {
+    background-color: #000;
+    width: 190px;
+    height: 270px;
+    border-radius: 15px;
+    transition: transform 0.3s ease; /* Efeito bonitinho opcional */
+}
+
+.curso:hover {
+    transform: translateY(-5px); /* Sobe um pouquinho ao passar o mouse */
+    border: 1px solid #68A063;
+}

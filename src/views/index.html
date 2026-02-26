@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <script>
+        function lines(){
+            let sizeW = Math.random() * 12;
+            let duration = Math.random() * 3;
+            let e = document.createElement('div')
+            e.setAttribute('class', 'circle');
+            document.body.appendChild(e)
+            e.style.width = 2+sizeW+'px'
+            e.style.left = Math.random() * + innerWidth + 'px';
+            e.style.animationDuration = 2 + duration+'s'
+
+            setTimeout(function(){
+            document.body.removeChild(e)
+            }, 5000)
+        }
+
+        
+
+        setInterval(function(){
+            lines()
+        }, 200)
+    </script>
+
+    <!-- Logo (No Topo) -->
+    <img class="logo" src="/logo/logo.png" alt="">
+
+    <div>
+        <button onclick="window.location='/login'" class="btn">ENTRAR</button>
+    </div>
+
+    <div class="flex-box-lateral">
+        <nav>
+            <ul>
+                <li><a href="">Sobre o Fit Project</a></li>
+                <li><a href="">Treinos</a></li>
+                <li><a href="">Metodologia</a></li>
+                <li><a href="">Depoimentos</a></li>
+                <li><a href="">Nossa Missão</a></li>
+                <li><a href="">Planos</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Sobre -->
+    <div class="flex-box sessao-sobre" >
+        <div>
+            <h6 class="title-heading">// Sobre o Fit Project</h6>
+            <h1 class="title-font">
+                Muito além de treinos, 
+                <br>
+                o Fit Project é o seu
+                <br>
+                parceiro completo de 
+                <br>
+                transformação
+            </h1>
+
+            <p>Somos a plataforma de streaming definitiva para sua saúde. Esqueça <br> taxas de matrícula
+                caras e academias lotadas. A Fit Project <br> traz os melhores instrutores do país direto
+                para a tela do seu celular,<br> TV ou computador.</p>
+
+            <img class="img-circle" src="/logo/fisi.png" alt="">
+        </div>
+    </div>
+
+    <!-- Treinamentos -->
+    <div class="flex-box">
+    <header class="header-secao">
+        <h6 class="title-heading">// Treinos</h6>
+        <h1 class="title-font">Nossos Treinamentos</h1>
+        <p>Explore um catálogo diversificado feito para se adaptar à sua rotina. 
+        Do relaxamento à alta intensidade, encontre o treino perfeito para o seu objetivo de hoje. 
+        Cada treinamento é projetado para levar você do
+        zero ao seu objetivo.</p>
+        <br>
+    </header>
+
+    <ul class="lista-treinos">
+        
+        <li>
+            <img class="flex-box-img" src="/logo/fogo.png" alt="Ícone de fogo">
+            <div class="conteudo-treino">
+                <h2>Queima Calórica</h2>
+                <p>Para suar e acelerar o metabolismo.</p>
+            </div>
+        </li>
+
+        <li>
+            <img class="flex-box-img" src="/logo/yoga.png" alt="Ícone de equilíbrio">
+            <div class="conteudo-treino">
+                <h2>Corpo & Mente</h2>
+                <p>Flexibilidade, core e redução de estresse.</p>
+            </div>
+        </li>
+
+        <li>
+            <img class="flex-box-img" src="/logo/força.png" alt="Ícone de peso">
+            <div class="conteudo-treino">
+                <h2>Força</h2>
+                <p>Ganho de massa usando o peso do corpo ou equipamentos simples.</p>
+            </div>
+        </li>
+
+        <li>
+            <img class="flex-box-img" src="/logo/espresso.png" alt="Ícone de cronômetro">
+            <div class="conteudo-treino">
+                <h2>Express 15</h2>
+                <p>Para quem não tem tempo a perder.</p>
+            </div>
+        </li>
+
+        <li>
+            <img class="flex-box-img" src="/logo/degrau.png" alt="Ícone de passos">
+            <div class="conteudo-treino">
+                <h2>Iniciantes</h2>
+                <p>O passo a passo para quem está começando hoje.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+    <!-- Metodologia -->
+    <div class="flex-box">
+        <h6 class="title-heading">// Metodologia</h6>
+        <h1 class="title-font">Ciência por trás do suor</h1>
+
+        <p>Não é apenas sobre se cansar, é sobre evoluir.
+            Nossos treinos são desenhados com progressão de carga e intensidade adaptável.</p>
+
+        <!-- Os pilares -->
+        <ul>
+            <img src="" alt="">
+            <li>Técnica: Instruções claras para evitar lesões.</li>
+
+            <img src="" alt="">
+            <li>Consistência: Planos de treino gamificados para você não desistir.</li>
+
+            <img src="" alt="">
+            <li>Resultados: Foco em saúde cardiovascular e tonificação real.</li>
+        </ul>
+    </div>
+
+    <!-- Depoimentos -->
+    <div class="flex-box">
+        <h6 class="title-heading">// O que dizem sobre a Fit Project</h6>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+
+    <!-- Nossa Missão -->
+    <div class="flex-box"></div>
+
+    <!-- Planos -->
+    <div class="flex-box"></div>
+
+    <!-- Contato -->
+    <div class="flex-box"></div>
+</body>
+
+</html>
