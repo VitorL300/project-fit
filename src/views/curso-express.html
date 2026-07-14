@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso - Express</title>
-    <link rel="stylesheet" href="/css/curso.css">
+    <title>Curso - Corpo e Mente</title>
+    <link rel="stylesheet" href="/public/css/curso.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="top-navbar">
-        <div class="left-section">
-            <button id="menu-toggle" class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <a href="/aluno" class="logo-link">
-                <img src="/logo/logo.png" alt="Logo FitProject" class="logo-img">
-            </a>
-        </div>
+<header class="top-navbar">
+    <div class="left-section">
+        <button id="menu-toggle" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
         
-        <div class="right-section">
-            <i class="far fa-bell notification-icon"></i>
-        </div>
-    </header>
+        <a href="/aluno" class="logo-link">
+            <img src="/public/logo/logo.png" alt="Logo FitProject" class="logo-img">
+        </a>
+    </div>
+    
+    <div class="right-section">
+        <i class="far fa-bell notification-icon"></i>
+    </div>
+</header>
 
     <aside class="sidebar" id="sidebar">
         <nav class="sidebar-nav">
@@ -99,10 +96,10 @@
 
 
     <main class="main-content" id="main-content">
-        <video src="/logo/teste.mp4"
+        <video src="/public/logo/teste.mp4"
             controls
             width="800"
-            poster="/logo/testeimg.webp">
+            poster="/public/logo/testeimg.webp">
         </video>
     </main>
 
@@ -113,10 +110,10 @@
         
         <ul class="video-playlist">
             <li class="video-item active" 
-                data-video="/logo/teste.mp4" 
-                data-poster="/logo/testeimg.webp">
+                data-video="/public/logo/teste.mp4" 
+                data-poster="/public/logo/testeimg.webp">
                 
-                <img src="/logo/testeimg.webp" class="thumb" alt="Thumbnail">
+                <img src="/public/logo/testeimg.webp" class="thumb" alt="Thumbnail">
                 <div class="video-info">
                     <h5 class="video-title">Introdução ao Curso</h5>
                     <span class="video-duration">05:20</span>
@@ -125,19 +122,19 @@
             </li>
 
             <li class="video-item" 
-                data-video="/logo/aula2.mp4" 
-                data-poster="/logo/thumb2.webp">
+                data-video="/public/logo/aula2.mp4" 
+                data-poster="/public/logo/thumb2.webp">
                 
                 <img src="https://via.placeholder.com/150x90" class="thumb" alt="Thumbnail">
                 <div class="video-info">
-                    <h5 class="video-title">Aquecimento Global</h5>
+                    <h5 class="video-title">Express</h5>
                     <span class="video-duration">10:15</span>
                 </div>
             </li>
 
             <li class="video-item" 
-                data-video="/logo/aula3.mp4" 
-                data-poster="/logo/thumb3.webp">
+                data-video="/public/logo/aula3.mp4" 
+                data-poster="/public/logo/thumb3.webp">
                 
                 <img src="https://via.placeholder.com/150x90" class="thumb" alt="Thumbnail">
                 <div class="video-info">
@@ -146,9 +143,9 @@
                 </div>
             </li>
             
-            </ul>
+        </ul>
     </aside>
 
-    <script src="/js/curso.js"></script>
+    <script src="/public/js/curso.js"></script>
 </body>
 </html>

@@ -6,8 +6,8 @@ const loginController = require('./src/controllers/loginController');
 
 router.use(express.urlencoded({ extended: true }));
 
-router.use(express.static(path.join(__dirname, 'public')));
-
+// CORREÇÃO: Adicionamos o '/public' como primeiro parâmetro aqui
+router.use('/public', express.static(path.join(__dirname, 'public')));
 
 // --- Rotas GET --- //
 router.get('/', (req, res) =>  { 
@@ -36,15 +36,6 @@ router.get('/curso-iniciante', (req, res) => {
 router.get('/curso-queima', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'views', 'curso-queima.html'))
 })
-
-router.get('/page-carrinho', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'views', 'page-carrinho.html'))
-})
-
-router.get('/carrinho', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'views', 'carrinho.html'))
-})
-
 
 // --- ROTAS DE AÇÃO (POST) ---
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Aluno - FitProject</title>
     
-    <link rel="stylesheet" href="/css/aluno.css"> 
+    <link rel="stylesheet" href="/public/css/aluno.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
         </button>
         
         <a href="/aluno" class="logo-link">
-            <img src="/logo/logo.png" alt="Logo FitProject" class="logo-img">
+            <img src="/public/logo/logo.png" alt="Logo FitProject" class="logo-img">
         </a>
     </div>
     
@@ -99,14 +99,14 @@
     <main class="main-content" id="main-content">
         
         <section class="box apresentacao">
-            <img src="/logo/box-apresentacao.webp" alt="Banner de Apresentação" class="img-banner">
+            <img src="/public/logo/box-apresentacao.webp" alt="Banner de Apresentação" class="img-banner">
         </section>
 
         <section class="box resume-playback">
             <h2>Continue de onde parou</h2>
             <div class="video-card" style="background-color: #1E1F21; padding: 20px; border-radius: 10px; margin-top: 15px;">
-                <video id="meuVideo" width="100%" controls>
-                    <source src="/logo/teste.mp4" type="video/mp4">
+                <video id="meuVideo" width="100%" controls style="border-radius: 8px;">
+                    <source src="/public/logo/teste.mp4" type="video/mp4">
                     Seu navegador não suporta vídeos.
                 </video>
                 <div class="progress-container">
@@ -121,15 +121,44 @@
             
             <div class="cursos-grid">
                 <div class="curso" onclick="window.location='/curso-iniciante'">
-                    <p>Iniciante</p>
+                    <img src="/public/logo/fisi.png" alt="Iniciante" class="curso-bg">
+                    <div class="curso-overlay">
+                        <h3>Iniciante</h3>
+                        <p>O passo a passo para quem está começando hoje.</p>
+                        <span class="curso-btn">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
-                <div class="curso"></div>
-                <div class="curso"></div>
-                <div class="curso"></div>
+
+                <div class="curso" onclick="window.location='/curso-forca'">
+                    <img src="/public/logo/fisi.png" alt="Força" class="curso-bg">
+                    <div class="curso-overlay">
+                        <h3>Força</h3>
+                        <p>Ganho de massa usando o peso do corpo ou equipamentos.</p>
+                        <span class="curso-btn">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="curso" onclick="window.location='/curso-corpo'">
+                    <img src="/public/logo/fisi.png" alt="Corpo & Mente" class="curso-bg">
+                    <div class="curso-overlay">
+                        <h3>Corpo & Mente</h3>
+                        <p>Flexibilidade, fortalecimento do core e relaxamento.</p>
+                        <span class="curso-btn">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="curso" onclick="window.location='/curso-queima'">
+                    <img src="/public/logo/fisi.png" alt="Queima Calórica" class="curso-bg">
+                    <div class="curso-overlay">
+                        <h3>Queima Calórica</h3>
+                        <p>Suor e alta intensidade para acelerar o metabolismo.</p>
+                        <span class="curso-btn">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <script src="/js/aluno.js"></script>
+    <script src="/public/js/aluno.js"></script>
 </body>
 </html>

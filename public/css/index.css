@@ -244,3 +244,209 @@ h1{
     text-transform: uppercase;
 }
 
+/*-------------------- DEPOIMENTOS -----------------*/
+
+.lista-depoimentos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.lista-depoimentos li {
+    background-color: #0B0B0B;
+    border-left: 4px solid #68A063;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;          /* Coloca a imagem e o bloco de conteúdo lado a lado */
+    align-items: center;    /* Centraliza a imagem verticalmente */
+    gap: 20px;              /* Espaço entre a imagem e o texto */
+}
+
+/* Nova classe para estilizar a foto redonda do cliente */
+.img-depoimento {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #68A063;
+    flex-shrink: 0;         /* Impede que a imagem amasse em telas menores */
+}
+
+/* Caixa que segura o texto e o nome do autor */
+.conteudo-depoimento {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.texto-depoimento {
+    font-style: italic;
+    color: #bac2c2;
+    font-weight: 300;
+}
+
+.autor-depoimento {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    align-self: flex-end;    /* Alinha o nome especificamente no lado inferior direito */
+    margin-top: auto;        /* Garante o empurrão para a base se o texto for longo */
+}
+
+/*-------------------- PLANOS -----------------*/
+
+.container-planos {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card-plano {
+    background-color: #0B0B0B;
+    border: 1px solid #1E1F21;
+    border-radius: 10px;
+    padding: 35px;
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-plano:hover {
+    transform: translateY(-5px);
+    border-color: #bac2c2;
+}
+
+/* Destaque para o Plano Anual */
+.card-plano.plano-destaque {
+    border: 2px solid #68A063;
+    box-shadow: 0 0 15px rgba(104, 160, 99, 0.1);
+}
+
+.tag-melhor-valor {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #68A063;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-plano h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.preco span {
+    font-size: 16px;
+    color: #bac2c2;
+    font-weight: 300;
+}
+
+.card-plano ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.card-plano ul li {
+    font-size: 14px;
+    color: #bac2c2;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* Pequeno marcador customizado antes dos itens do plano */
+.card-plano ul li::before {
+    content: "✓";
+    color: #68A063;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.btn-plano {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid #bac2c2;
+    border-radius: 8px;
+    color: #bac2c2;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-plano.plano-destaque .btn-plano {
+    background-color: #68A063;
+    border-color: #68A063;
+    color: #000;
+}
+
+.btn-plano:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
+.card-plano.plano-destaque .btn-plano:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/*-------------------- CONTATO E FOOTER -----------------*/
+
+.info-contato {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-contato p {
+    color: #bac2c2;
+}
+
+.info-contato strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.footer-copy {
+    border-top: 1px solid #0B0B0B;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.footer-copy p {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+}
+
