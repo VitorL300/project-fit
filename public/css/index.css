@@ -4,7 +4,7 @@
     
 }
 
-/*--------------------- background e animação ----------------------------*/
+/*---background e animação ---*/
 
 body{
     background-color: #0B0B0B;
@@ -59,7 +59,7 @@ body{
     background: linear-gradient(#0f0, transparent);
 }
 
-/*---------------------- MENU --------------------------------*/
+/*--- MENU ---*/
 
 .logo{
     width: 300px;
@@ -90,15 +90,15 @@ body{
 }
 
 .btn:hover {
-    border-color: #fff;      /* Borda fica branca */
-    color: #fff;             /* Texto fica branco */
-    background-color: rgba(255,255,255, 0.1); /* Fundo levemente branco */
-    transform: scale(1.05);  /* Aumenta 5% de tamanho */
+    border-color: #fff;    
+    color: #fff;             
+    background-color: rgba(255,255,255, 0.1); 
+    transform: scale(1.05);  
 }
 
-/* Estado: Clicando */
+
 .btn:active {
-    transform: scale(0.95);  /* Diminui levemente (efeito de apertar) */
+    transform: scale(0.95); 
     background-color: #68A063;
     color: #000;
 }
@@ -127,8 +127,8 @@ body{
 }
 
 .flex-box-lateral ul {
-    list-style: none; /* Remove as bolinhas */
-    padding-left: 0;   /* Remove o recuo padrão da esquerda */
+    list-style: none; 
+    padding-left: 0;  
     margin: 0;
 }
 
@@ -139,24 +139,24 @@ body{
 }
 
 .flex-box-lateral ul li a {
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none; 
     color: #bac2c2;          
-    display: block;        /* Faz o clique funcionar na linha toda, não só no texto */
+    display: block;        
     transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
 /* Mouse por cima do link */
 .flex-box-lateral ul li a:hover {
-    color: #fff;             /* Muda para branco (ou use uma cor verde neon!) */
-    padding-left: 10px;      /* Desliza 10px para a direita */
+    color: #fff;             
+    padding-left: 10px;     
 }
 
-/* Clicando no link */
+
 .flex-box-lateral ul li a:active {
-    color: #666;             /* Fica mais escuro no clique */
+    color: #666;             
 }
 
-/*-------------------- FLEX-BOX -----------------*/
+/*--- FLEX-BOX ---*/
 
 .img-circle{
     position: absolute;
@@ -192,10 +192,10 @@ body{
 }
 
 .flex-box ul li{
-    list-style: none; /* Remove as bolinhas */
-    display: flex;        /* Coloca a imagem e o texto na mesma linha */
-    align-items: center;  /* Centraliza o ícone verticalmente com o texto */
-    gap: 5px;            /* Cria um espaço entre a imagem e o texto */
+    list-style: none; 
+    display: flex;        
+    align-items: center;  
+    gap: 5px;            
     margin-bottom: 30px;
 }
 
@@ -208,7 +208,7 @@ body{
     background-color: #000;
     width: 80px; 
     height: 80px;
-    object-fit: contain; /* Evita que a imagem estique/distorça */
+    object-fit: contain; 
     align-items: center;
     margin-right: 20px;
 }
@@ -244,7 +244,7 @@ h1{
     text-transform: uppercase;
 }
 
-/*-------------------- DEPOIMENTOS -----------------*/
+/*--- DEPOIMENTOS ---*/
 
 .lista-depoimentos {
     list-style: none;
@@ -259,22 +259,22 @@ h1{
     border-left: 4px solid #68A063;
     border-radius: 6px;
     padding: 20px;
-    display: flex;          /* Coloca a imagem e o bloco de conteúdo lado a lado */
-    align-items: center;    /* Centraliza a imagem verticalmente */
-    gap: 20px;              /* Espaço entre a imagem e o texto */
+    display: flex;          
+    align-items: center;    
+    gap: 20px;              
 }
 
-/* Nova classe para estilizar a foto redonda do cliente */
+
 .img-depoimento {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #68A063;
-    flex-shrink: 0;         /* Impede que a imagem amasse em telas menores */
+    flex-shrink: 0;         
 }
 
-/* Caixa que segura o texto e o nome do autor */
+
 .conteudo-depoimento {
     display: flex;
     flex-direction: column;
@@ -294,11 +294,11 @@ h1{
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    align-self: flex-end;    /* Alinha o nome especificamente no lado inferior direito */
-    margin-top: auto;        /* Garante o empurrão para a base se o texto for longo */
+    align-self: flex-end;  
+    margin-top: auto;        
 }
 
-/*-------------------- PLANOS -----------------*/
+/*--- PLANOS ---*/
 
 .container-planos {
     display: flex;
@@ -326,7 +326,6 @@ h1{
     border-color: #bac2c2;
 }
 
-/* Destaque para o Plano Anual */
 .card-plano.plano-destaque {
     border: 2px solid #68A063;
     box-shadow: 0 0 15px rgba(104, 160, 99, 0.1);
@@ -378,7 +377,7 @@ h1{
     align-items: center;
 }
 
-/* Pequeno marcador customizado antes dos itens do plano */
+
 .card-plano ul li::before {
     content: "✓";
     color: #68A063;
@@ -419,7 +418,7 @@ h1{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-/*-------------------- CONTATO E FOOTER -----------------*/
+/*---CONTATO E FOOTER ---*/
 
 .info-contato {
     margin-top: 25px;
