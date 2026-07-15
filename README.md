@@ -3,7 +3,7 @@
 <img width="1920" height="824" alt="fit-project-aluno" src="https://github.com/user-attachments/assets/ccced78b-e403-4a29-abb7-00e342165629" />
 
 
-Tecnologias Utilizadas
+<b><h1>Tecnologias Utilizadas</h1></b>
 Backend: Node.js, Express (Framework web rápido e minimalista).
 
 Frontend: HTML5, CSS3 (CSS Grid, Flexbox, custom variables), JavaScript Moderno (ES6+).
@@ -12,7 +12,8 @@ Frontend: HTML5, CSS3 (CSS Grid, Flexbox, custom variables), JavaScript Moderno 
 
 Tipografia: Inter Font (Google Fonts).
 
-🔧 Como Executar o Projeto Localmente
+<b><h1>Como Executar o Projeto Localmente</b></h1>
+
 Siga os passos abaixo para rodar a aplicação em sua máquina local:
 
 1. Pré-requisitos
@@ -23,6 +24,7 @@ Clone este repositório ou baixe os arquivos. Em seguida, abra o terminal do seu
 
 Bash
 npm install
+
 3. Executando o Servidor Node.js
 Para ligar o servidor Express localmente, execute o seguinte comando na raiz do projeto (onde está o arquivo server.js):
 
